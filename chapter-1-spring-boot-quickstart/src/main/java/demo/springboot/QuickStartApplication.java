@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Spring Boot 应用启动类
  *
- * Created by bysocket on 26/09/2017.
+ * @author: liuning11
+ * @date: 2020/6/7
  */
 @SpringBootApplication
 public class QuickStartApplication {

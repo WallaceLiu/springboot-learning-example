@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * Spring Boot Hello案例
  *
- * Created by bysocket on 26/09/2017.
+ * @author: liuning11
+ * @date: 2020/6/7
  */
 @Controller
 public class HelloController {
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    //
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    //
     @ResponseBody
     public String sayHello() {
         return "Hello，Spring Boot！";
