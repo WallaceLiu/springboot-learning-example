@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.spring.springboot.dao.CityDao">
+    <resultMap id="BaseResultMap" type="org.spring.springboot.domain.City">
+        <result column="id" property="id"/>
+        <result column="province_id" property="provinceId"/>
+        <result column="city_name" property="cityName"/>
+        <result column="description" property="description"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id, province_id, city_name, description
+	</sql>
+
+    <insert id="insert" parameterType="org.spring.springboot.domain.DataTypeDemo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into data_type_demo(d,t,dt,ts)
+        values
+        (#{d,jdbcType=DATE},
+        #{t,jdbcType=TIME},
+        #{dt,jdbcType=VARCHAR},
+        #{ts,jdbcType=TIMESTAMP})
+    </insert>
+
+</mapper>

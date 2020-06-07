@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+
 /**
  * 城市实体类
  * <p>
@@ -12,25 +16,26 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class City {
+public class DataTypeDemo {
 
     /**
-     * 城市编号
+     *
      */
-    private Long id;
+    private Date d;
 
     /**
-     * 省份编号
+     *
      */
-    private Long provinceId;
+    private Time t;
 
     /**
-     * 城市名称
+     *
      */
-    private String cityName;
+    private String dt;
 
     /**
-     * 描述
+     *
      */
-    private String description;
+    private Timestamp ts;
+
 }
